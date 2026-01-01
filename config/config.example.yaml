@@ -1,0 +1,31 @@
+# Configuration file example
+# Copy this to config.yaml and update with your settings
+
+# API Keys
+openai_api_key: "your-openai-api-key-here"
+# Or for other providers:
+# anthropic_api_key: "your-anthropic-api-key-here"
+# huggingface_api_key: "your-hf-api-key-here"
+
+# Model Settings
+embedding_model: "text-embedding-ada-002"  # or "sentence-transformers/all-MiniLM-L6-v2"
+llm_model: "gpt-4"  # or "gpt-3.5-turbo", "claude-3-opus", etc.
+
+# Vector Store Settings
+vector_store_type: "chroma"  # or "pinecone", "weaviate", "faiss", "qdrant"
+vector_store_path: "./data/vector_store"
+embedding_dimension: 1536  # Adjust based on your embedding model
+
+# Retrieval Settings
+top_k: 5  # Number of documents to retrieve
+similarity_threshold: 0.7  # Minimum similarity score
+
+# Data Settings
+chunk_size: 1000  # Characters per chunk
+chunk_overlap: 200  # Overlap between chunks
+
+# API Settings
+api_host: "0.0.0.0"
+api_port: 8000
+debug: false
+
